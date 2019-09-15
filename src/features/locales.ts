@@ -19,7 +19,7 @@ export class Locales {
   /*
   Fetch and merge Locales from Localise Project, then write them to "outDir"
   * */
-  async fetchAndMerge(baseLanguageKeys: {[key: string]: string}, outDir: string) {
+  async fetchAndMerge(baseLanguageKeys: {[key: string]: any}, outDir: string) {
     ensureDirSync(outDir);
     const defaultLangJson = flatten(baseLanguageKeys);
 
