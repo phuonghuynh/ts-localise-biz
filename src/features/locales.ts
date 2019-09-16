@@ -16,6 +16,16 @@ export class Locales {
     this.logger = conf.logger;
   }
 
+  /** import translated keys into localise project
+      add tag "new" to new keys
+        - ignore-new=false
+        - ignore-existing=true
+        - delete-absent=true
+   */
+  async sync(locale: string, keys: { [key: string]: any }) {
+    return this.api.sync(locale, keys);
+  }
+
   /*
   Fetch and merge Locales from Localise Project, then write them to "outDir"
   * */

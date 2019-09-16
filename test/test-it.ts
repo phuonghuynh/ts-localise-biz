@@ -14,7 +14,9 @@ export class TestIt {
 
   @test('should fetch and merge localise')
   async testFetchAndMerge() {
-    initLocaliseBiz({localiseApiKey: process.env.LocaliseApiKey})
-      .fetchAndMerge(DefaultI18n, `./test/localise`);
+    const localiseBiz = initLocaliseBiz({localiseApiKey: process.env.LocaliseApiKey});
+    await localiseBiz.sync('en-US', DefaultI18n)
+    // localiseBiz
+    //   .fetchAndMerge(DefaultI18n, `./test/localise`);
   }
 }

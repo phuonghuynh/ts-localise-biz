@@ -6,6 +6,9 @@ export declare class Locales {
     readonly api: LocaliseApi;
     readonly logger: ILogger;
     constructor(conf: IConfig);
+    sync(locale: string, keys: {
+        [key: string]: any;
+    }): Promise<any>;
     fetchAndMerge(baseLanguageKeys: {
         [key: string]: any;
     }, outDir: string): Promise<void>;
