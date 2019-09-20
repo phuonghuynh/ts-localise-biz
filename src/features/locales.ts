@@ -40,7 +40,7 @@ export class Locales {
 
       const result = {};
       for (const trans in defaultLangJson) {
-        result[trans] = get(translated, trans, defaultLangJson[trans]);
+        result[trans] = get(translated, trans) || defaultLangJson[trans]; //translation is empty, so we use default value
       }
 
       const outputFilePath = resolve(outDir, `${localeCode}.json`);
