@@ -1,2 +1,5 @@
 # ts-localise-biz
-Localize.biz API in TypeScript
+Localize.biz Utils in TypeScript
+
+Expose functions:
+  - `src/features/locales.ts`
